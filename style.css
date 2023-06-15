@@ -1,0 +1,82 @@
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .neon-video {
+    width: 1000px;
+    height: 550px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 20px #fff;
+  }
+  
+  .neon-video::-webkit-media-controls-panel {
+    background-color: transparent;
+  }
+  
+  .neon-video::-webkit-media-controls-play-button,
+  .neon-video::-webkit-media-controls-start-playback-button {
+    display: none;
+  }
+  
+  .neon-video::-webkit-media-controls {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .neon-video:hover::-webkit-media-controls {
+    opacity: 1;
+  }
+  
+  .neon-video::-webkit-media-controls-current-time-display,
+  .neon-video::-webkit-media-controls-time-remaining-display,
+  .neon-video::-webkit-media-controls-timeline,
+  .neon-video::-webkit-media-controls-volume-slider-container,
+  .neon-video::-webkit-media-controls-mute-button {
+    display: none;
+  }
+  
+  .neon-video::-webkit-media-controls-fullscreen-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .neon-video:hover::-webkit-media-controls-fullscreen-button {
+    opacity: 1;
+  }
+  
+  /* Neon effect */
+  .neon-video {
+    background-color: #000;
+    filter: brightness(150%) contrast(200%) saturate(150%);
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00;
+    animation: neon-glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes neon-glow {
+    from {
+      filter: brightness(150%) contrast(200%) saturate(150%);
+      box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00;
+    }
+    to {
+      filter: brightness(150%) contrast(250%) saturate(200%);
+      box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00, 0 0 160px #00ff00;
+    }
+  }
+  
